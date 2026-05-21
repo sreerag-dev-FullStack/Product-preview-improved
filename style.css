@@ -1,157 +1,154 @@
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 
-    img {
-      display: block;
-      width: 100%;
-    }
+body {
+    background-color: hsl(30, 38%, 92%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', serif;
+    padding-bottom: 20px;
+}
 
-    body {
-      background-color: hsl(30, 38%, 92%);
-      font-family: 'Montserrat', sans-serif;
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-    }
+img {
+    display: block;
+    width: 100%;
+}
 
+.card {
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    max-width: 720px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.perfume-pic {
+    width: 100%;
+}
+
+.desktop-pic {
+    display: none;
+}
+
+.mobile-pic {
+    display: block;
+}
+
+.perfume-details {
+    padding: 28px 24px;
+}
+
+.perfume-title {
+    font-family: 'Montserrat', sans-serif;
+    color: hsl(228, 12%, 48%);
+    font-size: 13px;
+    letter-spacing: 4px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.perfume-name {
+    font-family: 'Fraunces', sans-serif;
+    font-size: 32px;
+    margin-bottom: 18px;
+    line-height: 1.1;
+    color: hsl(212, 21%, 14%);
+}
+
+.perfume-description {
+    font-family: 'Montserrat', sans-serif;
+    color: hsl(228, 12%, 48%);
+    line-height: 1.6;
+    font-size: 14px;
+    margin-bottom: 24px;
+}
+
+.price-container {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 28px;
+}
+
+.discount {
+    font-family: 'Fraunces', sans-serif;
+    font-size: 32px;
+    color: hsl(158, 36%, 37%);
+    font-weight: 700;
+}
+
+.price {
+    color: hsl(228, 12%, 48%);
+    text-decoration: line-through;
+    font-size: 14px;
+}
+
+.cart {
+    width: 100%;
+    padding: 16px;
+    background-color: hsl(158, 36%, 37%);
+    color: white;
+    border-radius: 10px;
+    border: none;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cart:hover {
+    background-color: hsl(158, 42%, 18%);
+}
+
+.icon-cart {
+    width: 18px;
+    height: 16px;
+}
+
+@media(min-width: 768px){
     .card {
-      background-color: white;
-      border-radius: 15px;
-      overflow: hidden;
-      max-width: 720px;
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-    }
-
-    .Perfume-pic {
-      width: 100%;
-    }
-
-    .Desktop-pic {
-      display: none;
-    }
-
-    .Mobile-pic {
-      display: block;
-    }
-
-    .Perfume-details {
-      padding: 28px 24px;
-    }
-
-    .Perfume-title {
-      font-family: 'Montserrat', sans-serif;
-      color: hsl(228, 12%, 48%);
-      font-size: 13px;
-      text-transform: uppercase;
-      font-weight: 500;
-      letter-spacing: 4px;
-      margin-bottom: 12px;
-    }
-
-    .Perfume-name {
-      font-family: 'Fraunces', sans-serif;
-      font-size: 32px;
-      line-height: 1.1;
-      color: hsl(212, 21%, 14%);
-      margin-bottom: 18px;
-    }
-
-    .Perfume-description {
-      font-family: 'Montserrat', sans-serif;
-      color: hsl(228, 12%, 48%);
-      line-height: 1.6;
-      font-size: 14px;
-      margin-bottom: 24px;
-    }
-
-    .price-container {
-      display: flex;
-      align-items: center;        /* Perfect vertical alignment */
-      gap: 16px;
-      margin-bottom: 28px;
-    }
-
-    .discount {
-      font-family: 'Fraunces', sans-serif;
-      color: hsl(158, 36%, 37%);
-      font-size: 32px;
-      font-weight: 700;
-    }
-
-    .price {
-      font-size: 14px;
-      color: hsl(228, 12%, 48%);
-      text-decoration: line-through;
-      position: relative;
-      top: -1px;                   /* Fine tuning if needed */
-    }
-
-    .Cart {
-      width: 100%;
-      padding: 16px;
-      border: none;
-      background-color: hsl(158, 36%, 37%);
-      color: white;
-      font-size: 15px;
-      font-weight: 700;
-      font-family: 'Montserrat', sans-serif;
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-
-    .Cart:hover {
-      background-color: hsl(158, 42%, 18%);
-    }
-
-    .icon-cart {
-      width: 18px;
-      height: 16px;
-    }
-
-    /* ===================== DESKTOP ===================== */
-    @media (min-width: 768px) {
-      .card {
         display: flex;
         height: 500px;
-      }
+    }
 
-      .Perfume-pic {
+    .perfume-pic {
         width: 50%;
-      }
+    }
 
-      .Mobile-pic {
+    .mobile-pic {
         display: none;
-      }
+    }
 
-      .Desktop-pic {
+    .desktop-pic {
         display: block;
         height: 100%;
         object-fit: cover;
-      }
+    }
 
-      .Perfume-details {
+    .perfume-details {
         width: 50%;
         padding: 0 40px;
         display: flex;
         flex-direction: column;
         justify-content: center;
-      }
-
-      .Perfume-name {
-        font-size: 38px;
-      }
-
-      .price-container {
-        margin-bottom: 32px;
-      }
     }
+
+    .perfume-name {
+        font-size: 38px;
+    }
+
+    .price-container {
+        margin-bottom: 32px;
+    }
+}
